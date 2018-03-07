@@ -1,8 +1,8 @@
 function getDocUrl(filename) {
-  return `https://raw.githubusercontent.com/uber/deck.gl/5.1-release/docs/${filename}`;
+  return `https://raw.githubusercontent.com/uber/deck.gl/master/docs/${filename}`;
 }
 function getCodeUrl(pathname) {
-  return `https://github.com/uber/deck.gl/tree/5.1-release/${pathname}`;
+  return `https://github.com/uber/deck.gl/tree/master/${pathname}`;
 }
 
 // mapping from file path in source to generated page url
@@ -169,6 +169,10 @@ export const docPages = generatePath([
         content: getDocUrl('get-started/getting-started.md')
       },
       {
+        name: 'Using Standalone',
+        content: getDocUrl('advanced/using-standalone.md')
+      },
+      {
         name: 'Using With React',
         content: getDocUrl('get-started/using-with-react.md')
       },
@@ -177,17 +181,54 @@ export const docPages = generatePath([
         content: getDocUrl('get-started/using-with-mapbox-gl.md')
       },
       {
+        name: 'Vis Academy',
+        content: getDocUrl('get-started/vis-academy.md')
+      }
+    ]
+  },
+  {
+    name: 'Developer Guide',
+    children: [
+      {
         name: 'Using Layers',
         content: getDocUrl('get-started/using-layers.md')
       },
       {
         name: 'Adding Interactivity',
         content: getDocUrl('get-started/interactivity.md')
+      },
+      {
+        name: 'Using Views',
+        content: getDocUrl('advanced/views.md')
+      },
+      {
+        name: 'Coordinate Systems',
+        content: getDocUrl('advanced/coordinate-systems.md')
+      },
+      {
+        name: 'Viewports and Projections',
+        content: getDocUrl('advanced/viewports.md')
+      },
+      {
+        name: 'Optimizing Updates',
+        content: getDocUrl('advanced/updates.md')
+      },
+      {
+        name: 'Performance Notes',
+        content: getDocUrl('advanced/performance.md')
+      },
+      {
+        name: 'About 64 bit Layers',
+        content: getDocUrl('advanced/64-bits.md')
+      },
+      {
+        name: 'Tips and Tricks',
+        content: getDocUrl('advanced/tips-and-tricks.md')
       }
     ]
   },
   {
-    name: 'Custom Layers',
+    name: 'Custom Layer Guide',
     children: [
       {
         name: 'Writing Your Own Layer',
@@ -220,43 +261,6 @@ export const docPages = generatePath([
       {
         name: 'Writing Shaders',
         content: getDocUrl('advanced/writing-shaders.md')
-      }
-    ]
-  },
-  {
-    name: 'Advanced Topics',
-    children: [
-      {
-        name: 'Coordinate Systems',
-        content: getDocUrl('advanced/coordinate-systems.md')
-      },
-      {
-        name: 'Views',
-        content: getDocUrl('advanced/views.md')
-      },
-      {
-        name: 'Viewports',
-        content: getDocUrl('advanced/viewports.md')
-      },
-      {
-        name: 'Updates',
-        content: getDocUrl('advanced/updates.md')
-      },
-      {
-        name: 'Performance',
-        content: getDocUrl('advanced/performance.md')
-      },
-      {
-        name: '64 bit Layers',
-        content: getDocUrl('advanced/64-bits.md')
-      },
-      {
-        name: 'Using Standalone',
-        content: getDocUrl('advanced/using-standalone.md')
-      },
-      {
-        name: 'Tips and Tricks',
-        content: getDocUrl('advanced/tips-and-tricks.md')
       }
     ]
   },
